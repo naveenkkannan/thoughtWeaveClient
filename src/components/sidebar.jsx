@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Search, Home, User, Menu, X } from "lucide-react"
+import { BookOpen, Search, Home, User, Menu } from "lucide-react"
 
 const sidebarItems = [
   {
@@ -28,14 +28,14 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button - Always shows hamburger */}
       <Button
         variant="ghost"
         size="icon"
         className="fixed top-4 left-4 z-50 md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <Menu className="h-6 w-6" />
       </Button>
 
       {/* Overlay for mobile */}
